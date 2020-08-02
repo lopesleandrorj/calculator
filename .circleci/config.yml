@@ -25,8 +25,9 @@ jobs:
             git clone git@github.com:lopesleandrorj/calculator.git
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
-
-            git checkout dev
+            git remote update
+            git fetch
+            git checkout --track origin/dev
             git push dev:master
             
 
