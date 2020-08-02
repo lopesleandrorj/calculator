@@ -25,10 +25,9 @@ jobs:
             git remote set-url origin git@github.com:lopesleandrorj/calculator.git
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
-            git checkout master
             git add .
             git commit -m "New deploy"
-            git push origin master
+            git push dev:master
 
 workflows:
   version: 2
