@@ -26,7 +26,8 @@ jobs:
             cd ./calculator
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
-            ls -la
+            git checkout master
+            git pull origin dev
             
             
 
