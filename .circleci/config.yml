@@ -22,7 +22,8 @@ jobs:
          
       - run:
           command: |
-            git push 
+            git checkout master
+            git push master
 
 workflows:
   version: 2
