@@ -26,6 +26,7 @@ jobs:
             git config --global user.name "lopesleandrorj"
             git init
             git remote set-url origin git@github.com:lopesleandrorj/calculator.git
+            git checkout master
             git add .
             git commit -m "[skip ci] Generated Build"
             git push origin master
