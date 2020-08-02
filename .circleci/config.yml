@@ -22,13 +22,17 @@ jobs:
          
       - run:
           command: |
-            git push
+            git push 
 
 workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - build
+      - build:
+        filters:
+          branches:
+            only:
+              - dev
       - deploy:
           requires:
             - build
