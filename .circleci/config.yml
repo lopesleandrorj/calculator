@@ -27,7 +27,6 @@ jobs:
             git branch -a
             git checkout -b master
             git pull origin dev
-            cd ls -la
             git push --set-upstream origin master
 
             
