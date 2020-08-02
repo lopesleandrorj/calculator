@@ -18,14 +18,13 @@ jobs:
     working_directory: ~/repo
     
     steps:    
-      - checkout 
       - run:
           command: |
-            git init
             git clone git@github.com:lopesleandrorj/calculator.git calculator
             cd ./calculator
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
+            git branches
             git checkout origin master
             git pull origin dev
             git add .
