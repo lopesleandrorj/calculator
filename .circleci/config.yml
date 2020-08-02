@@ -24,11 +24,9 @@ jobs:
           command: |
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
-            git init
-            git remote set-url origin git@github.com:lopesleandrorj/calculator.git
-            git checkout master
             git add .
-            git commit -m "[skip ci] Generated Build"
+            git commit -m "[skip ci ci] Generated Build"
+            npm version patch -m "[skip ci ci] Bumped version number to %s"
             git push origin master
             git push --tags
 
