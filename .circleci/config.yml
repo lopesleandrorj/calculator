@@ -21,9 +21,12 @@ jobs:
       - run:
           command: |
             git init
+
+            git clone git@github.com:lopesleandrorj/calculator.git
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
 
+            git checkout dev
             git push dev:master
             
 
