@@ -21,15 +21,13 @@ jobs:
       - checkout 
       - run:
           command: |
-            whoami
-            pwd
             git init
             git clone git@github.com:lopesleandrorj/calculator.git calculator
             cd ./calculator
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
-
-            git push dev:master
+            pwd
+            
             
 
 
