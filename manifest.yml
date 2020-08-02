@@ -1,0 +1,7 @@
+---
+    name: calculator-js
+    instances: 1
+    buildpack: nodejs_buildpack
+    memory: 256M
+    command: node app.js
+    disk_quota: 1024M

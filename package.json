@@ -1,0 +1,32 @@
+{
+  "name": "Calculator",
+  "version": "1.0.0",
+  "description": "Calculator API",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudant/cloudant": "^4.2.4",
+    "amqplib": "^0.6.0",
+    "cfenv": "^1.2.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.2",
+    "fs": "0.0.1-security",
+    "jest": "^26.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "kafkajs": "^1.12.0",
+    "nodejs-event-manager": "^1.1.2",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "mock-couch": "^0.1.11"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.ibm.com:lpachu/badge.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
