@@ -26,7 +26,7 @@ jobs:
             git config --global user.name "lopesleandrorj"
             git branch -a
             git checkout -b master
-            git pull origin/dev
+            git pull origin dev
             cd ls -la
             git push --set-upstream origin master
 
