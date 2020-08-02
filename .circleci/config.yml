@@ -27,6 +27,7 @@ jobs:
 
             git checkout master
             git reset --hard origin/dev
+            git push -f origin dev
 
 workflows:
   version: 2
