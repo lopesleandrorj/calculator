@@ -28,7 +28,7 @@ jobs:
             git pull origin dev
             git add .
             git commit -m "[skip ci] automatic commit from circleci"
-            git push set upstream origin master
+            git push --set-upstream origin master
 
             cat ./.circleci/config.yml
 
