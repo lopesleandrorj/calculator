@@ -22,11 +22,11 @@ jobs:
          
       - run:
           command: |
+            git config --global user.email "lopes.leandrorj@gmail.com"
+            git config --global user.name "lopesleandrorj"
             git checkout master
             git add .
             git commit -m "New commit from CircleCI"
-            git config --global user.email "lopes.leandrorj@gmail.com"
-            git config --global user.name "lopesleandrorj"
             git push master
 
 workflows:
