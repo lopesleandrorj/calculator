@@ -24,9 +24,7 @@ jobs:
             cd ./calculator
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
-            git branch -a
-            git branch --set-upstream master origin/master
-            git pull origin dev
+            git fetch -p
             git add .
             git commit -m "[skip ci] automatic commit from circleci"
             git push
