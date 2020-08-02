@@ -24,13 +24,10 @@ jobs:
             cd ./calculator
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
+            git branches -a
             git checkout -b master
-            git pull origin dev
-            git add .
-            git commit -m "[skip ci] automatic commit from circleci"
+            cd ls -la
             git push --set-upstream origin master
-
-            cat ./.circleci/config.yml
 
             
             
