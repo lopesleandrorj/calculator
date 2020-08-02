@@ -27,7 +27,8 @@ jobs:
             git add .
             git commit -m "[skip ci] Generated Build"
             npm version patch -m "[skip ci] Bumped version number to %s"
-            git push dev:master
+            git checkout master
+            git reset --hard dev
 
 workflows:
   version: 2
