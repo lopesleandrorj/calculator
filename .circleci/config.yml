@@ -28,7 +28,8 @@ jobs:
             git config --global user.name "lopesleandrorj"
             git checkout master
             git pull origin dev
-            git commit -m "automatic commit from circleci"
+            git add .
+            git commit -m "[skip ci] automatic commit from circleci"
             git push
             
             
