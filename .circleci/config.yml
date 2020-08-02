@@ -17,7 +17,8 @@ jobs:
         enabled: true
     working_directory: ~/repo
     
-    steps:     
+    steps:    
+      - checkout 
       - run:
           command: |
             git init
