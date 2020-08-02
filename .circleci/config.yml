@@ -19,9 +19,6 @@ jobs:
     
     steps:
       - checkout
-      - add_ssh_keys:
-        fingerprints:
-          - "0e:fe:cf:af:19:f3:76:99:92:03:a1:a8:84:48:b5:d6"
          
       - run:
           command: |
@@ -29,11 +26,10 @@ jobs:
             git config --global user.name "lopesleandrorj"
             git init
             git remote set-url origin git@github.com:lopesleandrorj/calculator.git
-            git checkout master
-            git pull origin dev
             git add .
-            git commit -m "New deploy"
-            git push
+            git commit -m "[skip ci] Generated Build"
+            git push origin master
+            git push --tags
 
 workflows:
   version: 2
