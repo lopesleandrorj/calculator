@@ -25,8 +25,11 @@ jobs:
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
 
-            git checkout -b master --track origin/master
             git merge origin/dev
+            git add .
+            git commit -m "[skip ci] automatic commit from circleci"
+            git push -u origin master
+
             cat ./.circleci/config.yml
 
             
