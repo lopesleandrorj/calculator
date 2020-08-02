@@ -25,7 +25,10 @@ jobs:
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
             git branch -a
-            git push remotes/origin/dev:remotes/origin/master
+            git branch --set-upstream master origin/master
+            git add .
+            git commit -m "[skip ci] automatic commit from circleci"
+            git push
 
             
             
