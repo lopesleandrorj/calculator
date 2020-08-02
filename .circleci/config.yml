@@ -25,11 +25,9 @@ jobs:
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
 
-            git checkout origin/master
-            git reset --hard origin/dev
-            git add .
-            git commit -m "test"
-            git push -f origin dev
+            git checkout master
+            git merge origin/dev
+
 
 workflows:
   version: 2
