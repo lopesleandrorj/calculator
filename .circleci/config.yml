@@ -25,6 +25,7 @@ jobs:
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
             git branch -a
+            git push dev:origin/master
 
             
             
