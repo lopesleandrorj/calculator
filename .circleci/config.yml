@@ -25,7 +25,7 @@ jobs:
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
 
-            git checkout --track origin/master
+            git checkout master --track origin/master
             git merge origin/dev
             cat ./.circleci/config.yml
 
