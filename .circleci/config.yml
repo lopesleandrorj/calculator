@@ -24,11 +24,9 @@ jobs:
           command: |
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
-            git add .
-            git commit -m "[skip ci] Generated Build"
-            npm version patch -m "[skip ci] Bumped version number to %s"
+
             git checkout master
-            git reset --hard dev
+            git reset --hard origin/dev
 
 workflows:
   version: 2
