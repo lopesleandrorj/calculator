@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+   heroku: circleci/heroku
+
 jobs:
   build:
     docker:
@@ -12,33 +15,14 @@ jobs:
       - run: npm install
       - run: npm test
   
-  deploy:
-    machine:
-        enabled: true
-    working_directory: ~/repo
-    
-    steps:
-      - checkout
-         
-      - run:
-          command: |
-            git config --global user.email "lopes.leandrorj@gmail.com"
-            git config --global user.name "lopesleandrorj"
-            git remote -v
-
-            git checkout master
-            git merge origin/dev
-
 
 workflows:
-  version: 2
-  build-and-deploy:
-    jobs:
-      - build:
-        filters:
-          branches:
-            only:
-              - master
-      - deploy:
-          requires:
-            - build
+   heroku_deploy:
+     jobs:
+       - build
+       - heroku/deploy-via-git:
+           requires:
+             - build # only run deploy-via-git job if the build job has completed
+           filters:
+             branches:
+               only: master # only run deploy-via-git job on master branch
