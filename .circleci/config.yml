@@ -40,7 +40,7 @@ workflows:
         filters:
           branches:
             only:
-              - dev
+              - master
       - deploy:
           requires:
             - build
