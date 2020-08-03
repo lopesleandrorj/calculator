@@ -17,15 +17,16 @@ jobs:
         enabled: true
     working_directory: ~/repo
     
-    steps:    
+    steps:
+      - checkout  
       - run:
           command: |
             git clone git@github.com:lopesleandrorj/calculator.git calculator
             cd ./calculator
-            git config --global user.email "lopes.leandrorj@gmail.com"
-            git config --global user.name "lopesleandrorj"
+            git config --global user.email "circleci"
+            git config --global user.name "circleci"
             git checkout -b master
-            git pull origin dev
+            git pull origin $CIRCLE_NAME
             git push --set-upstream origin master
 
             
