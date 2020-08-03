@@ -29,8 +29,8 @@ jobs:
             cd ./calculator
             git config --global user.email "circleci"
             git config --global user.name "circleci"
-            git pull origin $CURRENT_BRANCH
             git push --set-upstream origin master
+            git pull origin $CURRENT_BRANCH
 
             
             
