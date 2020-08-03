@@ -31,6 +31,10 @@ jobs:
             git config --global user.name "circleci"
             git push --set-upstream origin master
             git pull origin $CURRENT_BRANCH
+            git add .
+            git status
+            git commit -m "[skip ci] test"
+            git push
 
             
             
