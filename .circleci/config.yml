@@ -15,6 +15,10 @@ jobs:
   deploy:
     machine:
         enabled: true
+
+    environment:
+      CURRENT_BRACH: dev
+      
     working_directory: ~/repo
     
     steps:
@@ -26,7 +30,7 @@ jobs:
             git config --global user.email "circleci"
             git config --global user.name "circleci"
             git checkout -b master
-            git pull origin $CIRCLE_NAME
+            git pull origin $CURRENT_BRANCH
             git push --set-upstream origin master
 
             
