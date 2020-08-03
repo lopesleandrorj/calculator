@@ -33,7 +33,7 @@ jobs:
             git branch -a
             git checkout master
             ls -la
-            git merge dev
+            git merge origin/dev
 
             
             
