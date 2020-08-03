@@ -30,8 +30,8 @@ jobs:
             git config --global user.email "lopes.leandrorj@gmail.com"
             git config --global user.name "lopesleandrorj"
             git checkout master
-            git pull origin dev
-            git push --set-upstream origin master
+            git checkout --track origin/master
+            git merge dev
 
             
             
